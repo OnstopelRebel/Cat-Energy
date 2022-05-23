@@ -1,0 +1,24 @@
+.image-container {
+  width: 140px;
+  height: 112px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media (min-width: @tablet-width) {
+    align-items: center;
+    width: 168px;
+    height: 200px;
+  }
+}
+
+.image-container__link:active {
+  opacity: 0.6;
+}
+
+.image-container__image {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    top: 5px;
+  }
+}

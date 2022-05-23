@@ -1,0 +1,32 @@
+.address {
+  position: relative;
+  width: 100%;
+  background: @white;
+  color: @black;
+
+  &--gray {
+    background: @gray;
+    color: @black;
+    padding-bottom: 22px;
+
+    @media (min-width: @tablet-width) {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      background: @white;
+    }
+  }
+}
+
+.address__map {
+  display: block;
+  width: 100%;
+  height: 362px;
+  border: 0;
+  z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
+}

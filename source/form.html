@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Подбор программы | Cat Energy</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <div class="header-logo">
+          <a href="index.html" class="header-logo__link">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/svg/logo-tablet.svg">
+              <img src="img/svg/logo-mobile.svg" alt="Логотип магазина Cat Energy" class="header-logo__icon">
+            </picture>
+            <img src="img/svg/logo-text.svg" width="101" height="18" alt="Логотип магазина Cat Energy" class="header-logo__text">
+          </a>
+          <button type="button" class="header-logo__toggle header-logo__toggle--nojs header-logo__toggle--burger"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+        <nav class="main-nav main-nav--nojs">
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="index.html" class="main-nav__link">главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="catalog.html" class="main-nav__link">каталог продукции</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a href="form.html" class="main-nav__link">подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="program-choice">
+        <div class="intro">
+            <h1 class="intro__title intro__title--form">Подбор программы</h1>
+            <p class="intro__text">Заполните анкету, и мы подберем <br>
+              программу питания для вашего кота</p>
+        </div>
+        <form action="https://echo.htmlacademy.ru/" class="choice-form">
+          <div class="choice-form__wrapper">
+            <div class="layout-wrapper">
+              <fieldset class="name-fieldset">
+                <legend class="visually-hidden">Информация о коте</legend>
+                <div class="name-fieldset__wrapper">
+                  <div class="input-block">
+                    <label class="input-block__label" for="name">
+                      имя:*
+                    </label>
+                    <input type="text" id="name" placeholder="барсик" class="input-block__input input-block__input--name input-conditions" name="name" required>
+                  </div>
+                  <div class="input-block">
+                    <label class="input-block__label" for="weight">
+                      вес (кг):*
+                    </label>
+                    <input type="number" id="weight" placeholder="7" class="input-block__input input-block__input--weight input-conditions" name="weight" required>
+                  </div>
+                  <div class="input-block input-block--age">
+                    <label class="input-block__label" for="age">возраст (лет):</label>
+                    <input type="number" id="age" placeholder="7" class="input-block__input input-block__input--age input-conditions" name="age">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="goal-fieldset">
+              <legend class="visually-hidden">Цель для подбора питания</legend>
+              <div class="goal-fieldset__wrapper">
+                <label class="goal-fieldset__label">
+                  <input disabled type="radio" class="visually-hidden goal-fieldset__input" name="goal" value="slimming" checked>
+                  <span class="goal-fieldset__control-mark"></span>
+                  <span class="goal-fieldset__control-label">похудение</span>
+                </label>
+                <label class="goal-fieldset__label goal-fieldset__label--disabled">
+                  <input type="radio" class="visually-hidden goal-fieldset__input" name="goal" value="gain">
+                  <span class="goal-fieldset__control-mark"></span>
+                  <span class="goal-fieldset__control-label">набор массы</span>
+                </label>
+                <label class="goal-fieldset__label">
+                  <input type="radio" class="visually-hidden goal-fieldset__input" name="goal" value="advice">
+                  <span class="goal-fieldset__control-mark"></span>
+                  <span class="goal-fieldset__control-label">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </div>
+            </fieldset>
+            </div>
+            <fieldset class="contacts-fieldset">
+              <legend class="contacts-fieldset__legend greenline">
+                <span class="greenline__span">Контактные данные&nbsp;<br>(владельца кота)</span>
+              </legend>
+              <div class="contacts-fieldset__wrapper">
+                <div class="input-block input-block--email">
+                  <label for="email" class="input-block__label input-block__label--email">E-mail:*</label>
+                  <input type="email" id="email" name="email" placeholder="kuklachev@gmail.com" class="input-block__input input-block__input--email input-conditions" required>
+                  <svg class="input-block__icon input-block__icon--email" width="19" height="14" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#email-icon"></use>
+                  </svg>
+                </div>
+                <div class="input-block input-block--phone">
+                  <label for="phone" class="input-block__label input-block__label--phone">телефон:*</label>
+                  <input type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" class="input-block__input input-block__input--phone input-conditions" required>
+                  <svg class="input-block__icon input-block__icon--phone" width="20" height="21" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/svg/sprite.svg#phone-icon"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="contacts-fieldset__textarea-wrapper">
+                <label class="contacts-fieldset__comments greenline" for="comments">
+                  <span class="greenline__span">Комментарий</span>
+                </label>
+                <textarea name="comments" id="comments" placeholder="Расскажите обо всех повадках кота" class="contacts-fieldset__textarea input-conditions"></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="addition-fieldset">
+              <legend class="addition-fieldset__legend greenline">
+                <span class="greenline__span">Дополнительно</span>
+              </legend>
+              <div class="addition-fieldset__wrapper">
+                <label class="addition-fieldset__label">
+                  <input type="checkbox" name="sweetener" class="addition-fieldset__input visually-hidden" checked>
+                  <span class="addition-fieldset__control-mark"></span>
+                  <span class="addition-fieldset__control-label">сахарозаменитель</span>
+                </label>
+                <label class="addition-fieldset__label">
+                  <input type="checkbox" name="water" class="addition-fieldset__input visually-hidden">
+                  <span class="addition-fieldset__control-mark"></span>
+                  <span class="addition-fieldset__control-label">питьевая вода</span>
+                </label>
+                <label class="addition-fieldset__label">
+                  <input type="checkbox" name="milk" class="addition-fieldset__input visually-hidden">
+                  <span class="addition-fieldset__control-mark"></span>
+                  <span class="addition-fieldset__control-label">молоко</span>
+                </label>
+                <label class="addition-fieldset__label">
+                  <input type="checkbox" name="vitamins" class="addition-fieldset__input visually-hidden">
+                  <span class="addition-fieldset__control-mark"></span>
+                  <span class="addition-fieldset__control-label">витамины</span>
+                </label>
+              </div>
+            </fieldset>
+            <div class="choice-form__footer">
+              <button class="button-green choice-form__button" type="submit">отправить заявку</button>
+              <span class="choice-form__info"><sup>*</sup> — Обязательные поля</span>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section class="address address--gray">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <article class="address-block">
+          <div class="address-block__wrapper">
+            <h3 class="address-block__title">приглашаем<br>к сотрудничеству дилеров!</h3>
+            <address class="address-block__address">
+              <span class="address-block__street">ул. Большая<br>Конюшенная, д. 19/8</span>
+              <span class="address-block__city">Санкт-Петербург</span>
+            </address>
+          </div>
+        </article>
+        <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7993.760546089145!2d30.33796621142705!3d59.941431791738374!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1641984101795!5m2!1sru!2sru" width="800" height="600" allowfullscreen="" loading="lazy" title="Офис компании по адресу улица Большая Конюшенная, 19/8, Санкт-Петербург"></iframe>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="footer-logo">
+          <a href="index.html" class="footer-logo__link">
+            <img src="img/svg/logo-text.svg" width="101" height="18" alt="Логотип магазина Cat Energy" class="footer-logo__image">
+          </a>
+        </div>
+        <div class="footer-social">
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a href="#" class="footer-social__link">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg class="footer-social__icon footer-social__icon--vk" width="100%" height="100%" aria-hidden="true" focusable="false" viewBox="0 0 30 22">
+                  <use xlink:href="img/svg/sprite.svg#vk-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="#" class="footer-social__link">
+                <span class="visually-hidden">Инстаграмм</span>
+                <svg class="footer-social__icon footer-social__icon--instagram" width="100%" height="100%" aria-hidden="true" focusable="false" viewBox="0 0 23 23">
+                  <use xlink:href="img/svg/sprite.svg#instagramm-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-social__item">
+              <a href="#" class="footer-social__link">
+                <span class="visually-hidden">Фэйсбук</span>
+                <svg class="footer-social__icon footer-social__icon--facebook" width="100%" height="100%" aria-hidden="true" focusable="false" viewBox="0 0 28 33">
+                  <use xlink:href="img/svg/sprite.svg#facebook-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">
+            <svg class="copyright__text" aria-hidden="true" focusable="false" width="100%" height="100%">
+              <use xlink:href="img/svg/sprite.svg#copyright-text-icon"></use>
+            </svg>
+            <svg class="copyright__icon" width="100%" height="100%" aria-hidden="true" focusable="false" viewBox="0 0 27 34">
+              <use xlink:href="img/svg/sprite.svg#copyright-logo-icon"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>

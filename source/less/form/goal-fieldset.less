@@ -1,0 +1,112 @@
+.goal-fieldset {
+  .reset-fieldset();
+  border-bottom: 1px solid @text-border;
+
+  @media (min-width: @tablet-width) {
+    width: 628px;
+    border: 1px solid @text-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 568px;
+  }
+}
+
+.goal-fieldset__wrapper {
+  .margin-auto();
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px 19px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 31px 29px 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: flex-start;
+    padding: 36px 29px 26px;
+  }
+}
+
+.goal-fieldset__label {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 23px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &:nth-child(1) {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &:nth-child(2) {
+    @media (min-width: @desktop-width) {
+      top: 8px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.goal-fieldset__input:checked + .goal-fieldset__control-mark {
+  background: url("../img/svg/radiobutton-active.svg") no-repeat center;
+
+  @media (min-width: @tablet-width) {
+    background-size: 18px 18px;
+  }
+}
+
+.goal-fieldset__input:disabled + .goal-fieldset__control-mark,
+.goal-fieldset__input:disabled + .goal-fieldset__control-mark + .goal-fieldset__control-label {
+  opacity: 0.3;
+}
+
+.goal-fieldset__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @special-gray-2;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    border: 1px solid @special-gray-4;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.goal-fieldset__input:focus-visible + .goal-fieldset__control-mark {
+  border: 2px solid @black;
+}
+
+.goal-fieldset__control-label {
+  .oswald-regular(16px, 18px);
+  margin-left: 45px;
+  color: @dark-gray-2;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .oswald-regular(20px, 30px);
+    margin-left: 55px;
+  }
+}

@@ -1,0 +1,112 @@
+.choose-program {
+  padding: 27px 20px 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 54px;
+    padding-bottom: 185px;
+  }
+}
+
+.choose-program__title {
+  .reset();
+  .margin-auto();
+  .oswald-regular(36px, 36px);
+  margin-bottom: 25px;
+  max-width: 250px;
+  color: @white;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .oswald-regular(60px, 60px);
+    margin-left: 87px;
+    margin-bottom: 41px;
+    max-width: 415px;
+    text-align: start;
+    color: @black;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 77px 0;
+    margin-left: 80px;
+  }
+}
+
+.choose-program__tagline {
+  .reset();
+  .oswald-regular(14px, 14px);
+  margin-bottom: 29px;
+  color: @white;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .oswald-regular(20px, 20px);
+    margin-left: 87px;
+    margin-bottom: 20px;
+    text-align: start;
+    color: @black;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+    margin-bottom: 58px;
+    margin-left: 80px;
+  }
+}
+
+.choose-program__image-container {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    right: 191px;
+    bottom: 5px;
+    grid-column: 2/-1;
+    grid-row: 1/4;
+  }
+}
+
+.choose-program__image {
+  display: block;
+  .margin-auto();
+  margin-bottom: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: auto;
+  }
+}
+
+.choose-program__button {
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    .oswald-regular(20px, 20px);
+    position: relative;
+    bottom: 583px;
+    left: 88px;
+    padding: 17px 26px;
+    width: 244px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 6px;
+    left: 80px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}

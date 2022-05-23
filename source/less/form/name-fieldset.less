@@ -1,0 +1,26 @@
+.name-fieldset {
+  .reset-fieldset();
+  padding: 39px 20px 7px;
+  color: @dark-gray;
+  border-bottom: 1px solid @text-border;
+
+  @media (min-width: @tablet-width) {
+    border: 0;
+    padding: 66px 0 52px;
+  }
+}
+
+.name-fieldset__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 80px 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: space-between;
+    padding: 0;
+    min-height: 200px;
+  }
+}

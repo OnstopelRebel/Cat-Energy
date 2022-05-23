@@ -1,0 +1,132 @@
+.addition-fieldset {
+  .reset-fieldset();
+}
+
+.addition-fieldset__legend {
+  .reset();
+  .oswald-regular(24px, 26px);
+  margin: 0 0 40px 20px;
+
+  @media (min-width: @tablet-width) {
+    right: 20px;
+    .oswald-regular(36px, 36px);
+    margin: 0 0 62px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 65px 0;
+  }
+}
+
+.addition-fieldset__wrapper {
+  .margin-auto();
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 0 40px 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 50px;
+    padding: 0 0 64px 0;
+  }
+}
+
+.addition-fieldset__label {
+  .oswald-regular(16px, 18px);
+  position: relative;
+  text-transform: uppercase;
+
+  &--disabled {
+    opacity: 0.3;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .oswald-regular(20px, 30px);
+    width: 221px;
+    margin-bottom: 34px;
+
+    &:not(:last-child) {
+      margin-bottom: 42px;
+    }
+
+    &:nth-child(2n-1) {
+      margin-right: 123px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2n-1) {
+      margin-right: 0;
+    }
+
+    &:nth-child(2) {
+      left: 20px;
+    }
+
+    &:nth-child(3) {
+      left: 40px;
+    }
+
+    &:nth-child(4) {
+      left: 60px;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.addition-fieldset__input:focus-visible + .addition-fieldset__control-mark {
+  border: 2px solid @black;
+}
+
+.addition-fieldset__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @special-gray-2;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    border: 1px solid @special-gray-4;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.addition-fieldset__control-label {
+  margin-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 59px;
+  }
+}
+
+.addition-fieldset__input:checked + .addition-fieldset__control-mark {
+  background: url("../img/svg/checked-icon.svg") no-repeat center;
+}

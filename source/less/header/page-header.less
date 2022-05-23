@@ -1,0 +1,45 @@
+.page-header {
+  position: relative;
+
+  &--index {
+    @media (min-width: @desktop-width) {
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: -152px;
+        left: 50.6%;
+        content: "";
+        width: 50%;
+        height: 846px;
+        background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/jpg/background-cat-1-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 0 157px;
+
+        @media (min-resolution: 2dppx) {
+          background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/jpg/background-cat-1-desktop-2x.jpg");
+        }
+      }
+    }
+  }
+}
+
+.page-header__wrapper {
+  .margin-auto();
+  position: relative;
+  width: 100%;
+  padding: 0 6.25%;
+  border-bottom: 1px solid @text-border;
+
+  @media (min-width: @tablet-width) {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 3.9%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 54px 90px 29px 110px;
+  }
+}

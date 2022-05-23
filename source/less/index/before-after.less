@@ -1,0 +1,46 @@
+.before-after {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -32px;
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+}
+
+.before-after__image {
+  display: block;
+  margin-bottom: 10px;
+  width: 280px;
+  height: 232px;
+
+  &--hide {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    top: 42px;
+    margin-bottom: 73px;
+    width: 592px;
+    height: 511px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -21px;
+    left: 16px;
+    width: 592px;
+    height: 511px;
+    text-align: center;
+    margin-bottom: 11px;
+  }
+}

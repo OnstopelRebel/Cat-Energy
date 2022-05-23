@@ -1,0 +1,53 @@
+.greenline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: calc(100vw);
+    background: @green;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    @media (max-width: @mobile-width-only) {
+      left: 245px;
+    }
+  }
+
+  &--addition::after {
+    top: 19%;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: calc(100vw);
+      background: @green;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    &--addition::before {
+      top: 19%;
+    }
+  }
+}
+
+.greenline__span {
+  @media (max-width: @mobile-width-only) {
+    background: transparent;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 20px;
+    position: relative;
+    z-index: 10;
+    background: @white;
+    padding-left: 20px;
+  }
+}

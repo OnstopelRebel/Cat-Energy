@@ -1,0 +1,75 @@
+.address-block {
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    .margin-auto();
+    width: @desktop-width;
+    padding: 0 110px;
+  }
+}
+
+.address-block__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 20px 23px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 59px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    z-index: 10;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    padding: 59px 80px;
+    background: @white;
+  }
+}
+
+.address-block__title {
+  .reset();
+  .oswald-regular(16px, 20px);
+  max-width: 139px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .oswald-regular(20px, 26px);
+    max-width: 155px;
+  }
+}
+
+.address-block__address {
+  position: relative;
+  text-align: left;
+  max-width: 139px;
+
+  @media (min-width: @tablet-width) {
+    top: -2px;
+    max-width: 155px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.address-block__street {
+  .arial-font(14px, 20px);
+
+  @media (min-width: @tablet-width) {
+    .arial-font(16px, 20px);
+    display: block;
+    margin-bottom: 21px;
+  }
+}
+
+.address-block__city {
+  .arial-font(14px, 20px);
+
+  @media (min-width: @tablet-width) {
+    .arial-font(16px, 20px);
+  }
+}

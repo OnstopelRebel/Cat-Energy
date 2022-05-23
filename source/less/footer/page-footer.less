@@ -1,0 +1,21 @@
+.page-footer {
+  .margin-auto();
+  width: 100%;
+  background: @gray;
+  color: @black;
+}
+
+.page-footer__wrapper {
+  .margin-auto();
+  padding: 0 6.25%;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 57px 3.9%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 57px 110px;
+    max-width: 1600px;
+  }
+}

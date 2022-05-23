@@ -1,0 +1,27 @@
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0 22px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.footer-logo__link {
+  .reset-link();
+  padding: 5px 0;
+}
+
+.footer-logo__image {
+  width: 128px;
+  height: 24px;
+}

@@ -1,0 +1,56 @@
+//FONTS
+
+.arial-font(@font-size: 14px, @line-height: 18px) {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.oswald-regular(@font-size: 16px, @line-height: 16px) {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.oswald-medium() {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+//RESETS
+
+.reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.reset-list() {
+  .reset();
+  list-style: none;
+}
+
+.reset-fieldset() {
+  .reset();
+  border: none;
+}
+
+.reset-link(@color: #000000) {
+  text-decoration: none;
+  color: @color;
+}
+
+.reset-button() {
+  .reset();
+  border: none;
+}
+
+.margin-auto(@margin-top: 0, @margin-bottom: 0 ) {
+  margin: @margin-top auto @margin-bottom auto;
+}
